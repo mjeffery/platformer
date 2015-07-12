@@ -31,8 +31,10 @@
 			var physics = this.game.physics.arcade;
 			var layer = this.layer;
 			var player = this.player;
-
+			
+			player.controls.think(); //TODO save these somewhere else
 			physics.collide(player, layer);
+			physics.collide(player.bullets, layer, PlayerBullet.collideWorld);
 
 			player.think();
 		}
