@@ -19,7 +19,7 @@
 			map.setCollision([2]);
 			layer.resizeWorld();
 
-			var player = this.player = new Player(game, 1280 / 2, 720 /2);
+			var player = this.player = new Player(game, 800 / 2, 600 /2);
 			var playerBullets = player.bullets = new PlayerBulletGroup(game);
 			var controls = player.controls = new Controls(game);	
 

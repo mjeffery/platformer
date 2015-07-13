@@ -1,12 +1,12 @@
 (function(exports) {
 	function Player(game, x, y) { 
-		Phaser.Sprite.call(this, game, x, y, 'prototype-player');
+		Phaser.Sprite.call(this, game, x, y, 'prototype-player-small');
 
 		this.anchor.setTo(0.5, 1);
 
 		game.physics.enable(this, Phaser.Physics.ARCADE);	
 
-		this.body.setSize(64, 128);
+		this.body.setSize(32, 64);
 		this.body.gravity.setTo(0, Player.Physics.Gravity); 
 		this.body.drag.setTo(Player.Physics.Walk.Drag, 0);
 		this.body.maxVelocity.setTo(Player.Physics.Walk.MaxSpeed, Player.Physics.TerminalVelocity);
@@ -43,7 +43,7 @@
 		Shooting: {
 			FireRate: 100,
 			BulletSpeed: 900,
-			OffsetY: -64
+			OffsetY: -32
 		}
 	});
 
